@@ -14,12 +14,4 @@
 4. Branch'inizi push edin (`git push origin feature/yeniOzellik`)
 5. Pull Request oluşturun
 
-## 📝 Lisans
 
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakınız.
-
-## 📞 İletişim
-
-Dr Öğr Üyesi Hasan Ufuk Gökçe - [Üniversite Profili](https://www.istinye.edu.tr)
-
-Proje Linki: [https://github.com/kullanici_adi/repo_adi](https://github.com/kullanici_adi/repo_adi)
