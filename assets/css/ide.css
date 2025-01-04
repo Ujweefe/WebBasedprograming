@@ -1,0 +1,147 @@
+.ide-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.ide-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr 400px;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* File Explorer */
+.file-explorer {
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+}
+
+.explorer-header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.file-list {
+    padding: 0.5rem;
+}
+
+.file {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    color: var(--text-secondary);
+}
+
+.file.active {
+    background: var(--accent);
+    color: white;
+}
+
+.file:hover:not(.active) {
+    background: var(--border-color);
+}
+
+/* Editor Area */
+.editor-area {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-primary);
+}
+
+.editor-tabs {
+    display: flex;
+    background: var(--bg-secondary);
+    padding: 0.5rem 0.5rem 0;
+    gap: 0.25rem;
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    background: var(--bg-primary);
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.tab.active {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.tab-close {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0 0.25rem;
+}
+
+.editor-content {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.line-numbers {
+    padding: 1rem 0.5rem;
+    text-align: right;
+    color: var(--text-secondary);
+    background: var(--bg-primary);
+    border-right: 1px solid var(--border-color);
+    user-select: none;
+}
+
+#codeEditor {
+    flex: 1;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: none;
+    padding: 1rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    resize: none;
+}
+
+#codeEditor:focus {
+    outline: none;
+}
+
+/* Preview Area */
+.preview-area {
+    background: var(--bg-secondary);
+    border-left: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#previewFrame {
+    flex: 1;
+    border: none;
+    background: white;
+}
+
+/* IDE Controls */
+.ide-controls {
+    display: flex;
+    gap: 0.5rem;
+} 

@@ -1,0 +1,113 @@
+.terminal-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-primary);
+}
+
+.terminal-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-secondary);
+    margin: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.terminal-tabs {
+    display: flex;
+    align-items: center;
+    background: var(--bg-primary);
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+.terminal-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-secondary);
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.terminal-tab.active {
+    background: var(--accent);
+    color: white;
+}
+
+.new-tab-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    padding: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.new-tab-btn:hover {
+    background: var(--border-color);
+    color: var(--text-primary);
+}
+
+.terminal-output {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+.output-line {
+    margin-bottom: 0.5rem;
+    white-space: pre-wrap;
+}
+
+.error-line {
+    color: #ef4444;
+}
+
+.success-line {
+    color: #10b981;
+}
+
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-primary);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+}
+
+.prompt {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+#terminalInput {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: inherit;
+}
+
+#terminalInput:focus {
+    outline: none;
+}
+
+.terminal-controls {
+    display: flex;
+    gap: 0.5rem;
+} 

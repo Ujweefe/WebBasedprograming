@@ -1,0 +1,55 @@
+<div class="ide-panel">
+    <div class="ide-header">
+        <div class="ide-tabs">
+            <button class="ide-tab active">main.html</button>
+            <button class="ide-tab">style.css</button>
+            <button class="ide-tab">script.js</button>
+            <button class="ide-tab add-tab">+</button>
+        </div>
+        <div class="ide-controls">
+            <button class="ide-btn" title="Run"><i class="bi bi-play-fill"></i></button>
+            <button class="ide-btn" title="Save"><i class="bi bi-save"></i></button>
+            <button class="ide-btn" title="Settings"><i class="bi bi-gear"></i></button>
+        </div>
+    </div>
+    <div class="ide-content">
+        <div class="line-numbers">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+        </div>
+        <textarea class="code-editor" spellcheck="false"><!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>My Code</title>
+</head>
+<body>
+    
+</body>
+</html></textarea>
+    </div>
+    <div class="ide-footer">
+        <div class="ide-status">
+            <span>HTML</span>
+            <span>UTF-8</span>
+        </div>
+        <div class="ide-terminal-toggle">
+            <button class="ide-btn" onclick="toggleTerminal()">
+                <i class="bi bi-terminal"></i> Terminal
+            </button>
+        </div>
+    </div>
+    <div class="ide-terminal" id="terminal">
+        <div class="terminal-header">
+            <span>Terminal</span>
+            <button class="terminal-close" onclick="toggleTerminal()">×</button>
+        </div>
+        <div class="terminal-content">
+            <div class="terminal-line">
+                <span class="terminal-prompt">$</span>
+                <input type="text" class="terminal-input" placeholder="Enter command...">
+            </div>
+        </div>
+    </div>
+</div> 

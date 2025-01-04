@@ -1,0 +1,43 @@
+<header class="page-header">
+    <nav class="main-nav">
+        <div class="nav-brand">
+            <i class="bi bi-code-slash"></i>
+            <span>HTML5 Dersleri</span>
+        </div>
+        
+        <div class="nav-center">
+            <div class="url-bar">
+                <i class="bi bi-globe"></i>
+                <input type="text" value="http://localhost:3000" readonly>
+                <button class="refresh-btn">
+                    <i class="bi bi-arrow-clockwise"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="nav-actions">
+            <div class="action-buttons">
+                <button class="action-btn" title="Terminal'i Aç" onclick="window.location.href='/terminal'">
+                    <i class="bi bi-terminal"></i>
+                </button>
+                <button class="action-btn" title="IDE'yi Aç" onclick="window.location.href='/ide'">
+                    <i class="bi bi-code-square"></i>
+                </button>
+                <button class="action-btn" title="Dosyalar" onclick="toggleFileExplorer()">
+                    <i class="bi bi-folder2-open"></i>
+                </button>
+                <button class="action-btn" onclick="toggleChat()">
+                    <i class="bi bi-chat-dots"></i>
+                </button>
+            </div>
+            <div class="user-actions">
+                <button id="themeToggle" class="theme-btn">
+                    <i class="bi bi-moon-fill"></i>
+                </button>
+                <button class="profile-btn">
+                    <i class="bi bi-person-circle"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+</header> 

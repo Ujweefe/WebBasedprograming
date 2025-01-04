@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 ve Web Tabanlı Programlama Dersi</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="logo">
+            <i class="bi bi-code-slash"></i>
+            <span>Web Based Programming</span>
+        </div>
+        <div class="top-actions">
+            <button class="action-btn" title="Terminal'i Aç" onclick="window.location.href='terminal.html'">
+                <i class="bi bi-terminal"></i>
+            </button>
+            <button class="top-btn" onclick="toggleChat()">
+                <i class="bi bi-chat-dots"></i>
+            </button>
+            <button id="themeToggle" class="top-btn">
+                <i class="bi bi-moon-fill"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Web Based Programming</h1>
+        <p class="subtitle">Bu web sitesi İstinye Üniversitesi'nde Dr Öğr Üyesi Hasan Ufuk Gökçe tarafından verilen Web Based Programming dersi için hazırlanmıştır</p>
+
+        <div class="modules">
+            <!-- Module 1 -->
+            <div class="module">
+                <div class="module-number">01</div>
+                <div class="module-content">
+                    <h2>Temel HTML5 Konseptleri</h2>
+                    <ul>
+                        <li><i class="bi bi-file-code"></i> <a href="01-temel-html5/index.html">Giriş</a></li>
+                        <li><i class="bi bi-tags"></i> <a href="01-temel-html5/meta-tags.html">Meta Etiketleri</a></li>
+                        <li><i class="bi bi-text-paragraph"></i> <a href="01-temel-html5/text-elements.html">Metin Elementleri</a></li>
+                    </ul>
+                    <a href="01-temel-html5/index.html" class="module-btn">Başla <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Module 2 -->
+            <div class="module">
+                <div class="module-number">02</div>
+                <div class="module-content">
+                    <h2>Sayfa Yapısı</h2>
+                    <ul>
+                        <li><i class="bi bi-grid-1x2"></i> <a href="02-sayfa-yapisi/semantic-elements.html">Semantik Elementler</a></li>
+                        <li><i class="bi bi-layout-text-window"></i> <a href="02-sayfa-yapisi/page-sections.html">Sayfa Bölümleri</a></li>
+                    </ul>
+                    <a href="02-sayfa-yapisi/index.html" class="module-btn">Başla <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Module 3 -->
+            <div class="module">
+                <div class="module-number">03</div>
+                <div class="module-content">
+                    <h2>HTML5 Özet</h2>
+                    <ul>
+                        <li><i class="bi bi-file-code"></i> <a href="03-html-ozet/index.html#temel-yapi">Temel Yapı</a></li>
+                        <li><i class="bi bi-text-paragraph"></i> <a href="03-html-ozet/index.html#metin-elementleri">Metin Elementleri</a></li>
+                        <li><i class="bi bi-list-ul"></i> <a href="03-html-ozet/index.html#listeler">Listeler</a></li>
+                        <li><i class="bi bi-link-45deg"></i> <a href="03-html-ozet/index.html#linkler">Linkler</a></li>
+                        <li><i class="bi bi-image"></i> <a href="03-html-ozet/index.html#resimler">Resimler</a></li>
+                        <li><i class="bi bi-table"></i> <a href="03-html-ozet/index.html#tablolar">Tablolar</a></li>
+                        <li><i class="bi bi-input-cursor"></i> <a href="03-html-ozet/index.html#formlar">Formlar</a></li>
+                    </ul>
+                    <a href="03-html-ozet/index.html" class="module-btn">Başla <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terminal -->
+    <div id="terminal" class="terminal">
+        <div class="terminal-header">
+            <span><i class="bi bi-terminal"></i> Terminal</span>
+            <button class="terminal-close" onclick="toggleTerminal()">×</button>
+        </div>
+        <div class="terminal-content">
+            <div class="terminal-line">
+                <span class="prompt">$</span>
+                <input type="text" class="terminal-input" placeholder="Komut girin...">
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <button class="chat-trigger" onclick="toggleChat()">
+        <i class="bi bi-chat-dots-fill"></i>
+    </button>
+
+    <div id="chatWidget" class="chat-widget">
+        <div class="chat-header">
+            <span>
+                <i class="bi bi-robot"></i>
+                AI Asistan
+            </span>
+            <button class="chat-close" onclick="toggleChat()">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                Merhaba! HTML5 ve web programlama hakkında sorularınızı yanıtlamaya hazırım.
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Mesajınızı yazın...">
+            <button onclick="sendMessage()">
+                <i class="bi bi-send-fill"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/chat.js"></script>
+</body>
+</html> 

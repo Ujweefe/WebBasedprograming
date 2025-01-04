@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Sayfa Yapısı ve Semantik Elementler</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/lesson.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="logo">
+            <i class="bi bi-code-slash"></i>
+            <span>HTML5 Dersleri</span>
+        </div>
+        <div class="breadcrumb">
+            <a href="../index.html">Ana Sayfa</a>
+            <i class="bi bi-chevron-right"></i>
+            <span>Sayfa Yapısı</span>
+        </div>
+        <div class="top-actions">
+            <button class="action-btn" title="Terminal'i Aç" onclick="window.location.href='../terminal.html'">
+                <i class="bi bi-terminal"></i>
+            </button>
+            <button class="top-btn" onclick="toggleChat()">
+                <i class="bi bi-chat-dots"></i>
+            </button>
+            <button id="themeToggle" class="top-btn">
+                <i class="bi bi-moon-fill"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="lesson-container">
+        <!-- Sidebar -->
+        <aside class="lesson-sidebar">
+            <div class="sidebar-header">
+                <div class="module-badge">02</div>
+                <h2>Sayfa Yapısı</h2>
+            </div>
+            <nav class="lesson-nav">
+                <a href="index.html" class="lesson-nav-item active">
+                    <i class="bi bi-grid-1x2"></i>
+                    <span>Modern HTML5 Yapısı</span>
+                </a>
+                <a href="semantic-elements.html" class="lesson-nav-item">
+                    <i class="bi bi-columns"></i>
+                    <span>Semantik Elementler</span>
+                </a>
+                <a href="page-sections.html" class="lesson-nav-item">
+                    <i class="bi bi-layout-text-window"></i>
+                    <span>Sayfa Bölümleri</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="lesson-content">
+            <h1>HTML5 Sayfa Yapısı ve Semantik Elementler</h1>
+            <p class="lesson-intro">Modern HTML5 sayfa yapısı, semantik elementler kullanılarak daha anlamlı ve erişilebilir bir şekilde oluşturulur.</p>
+
+            <div class="code-block">
+                <div class="code-header">
+                    <span>HTML</span>
+                    <button class="copy-btn" onclick="copyCode(this)">
+                        <i class="bi bi-clipboard"></i>
+                    </button>
+                </div>
+                <pre><code>&lt;header&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;section&gt;...&lt;/section&gt;
+        &lt;section&gt;...&lt;/section&gt;
+    &lt;/article&gt;
+    
+    &lt;aside&gt;...&lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+            </div>
+
+            <div class="info-box">
+                <h3><i class="bi bi-info-circle"></i> Semantik Yapı Nedir?</h3>
+                <p>Semantik HTML elementleri, içeriğin anlamını ve yapısını belirten özel etiketlerdir. Bu elementler hem tarayıcılara hem de geliştiricilere sayfanın yapısı hakkında daha iyi bilgi verir.</p>
+            </div>
+
+            <div class="practice-section">
+                <h2><i class="bi bi-lightning"></i> Pratik Alıştırma</h2>
+                <p>Aşağıdaki yapıyı kullanarak basit bir blog sayfası oluşturun:</p>
+                <div class="task-list">
+                    <div class="task-item">
+                        <input type="checkbox" id="task1">
+                        <label for="task1">Header içinde navigasyon menüsü oluşturun</label>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" id="task2">
+                        <label for="task2">Main içinde bir makale ve yan menü ekleyin</label>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" id="task3">
+                        <label for="task3">Article içinde iki farklı section oluşturun</label>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" id="task4">
+                        <label for="task4">Footer'a telif hakkı bilgisi ekleyin</label>
+                    </div>
+                </div>
+
+                <div class="ide-section">
+                    <button class="ide-toggle" onclick="toggleIDE()">
+                        <i class="bi bi-code-square"></i> IDE'yi Aç
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Terminal -->
+    <div id="terminal" class="terminal">
+        <div class="terminal-header">
+            <span><i class="bi bi-terminal"></i> Terminal</span>
+            <button class="terminal-close" onclick="toggleTerminal()">×</button>
+        </div>
+        <div class="terminal-content">
+            <div class="terminal-line">
+                <span class="prompt">$</span>
+                <input type="text" class="terminal-input" placeholder="Komut girin...">
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div id="chatWidget" class="chat-widget">
+        <div class="chat-header">
+            <span><i class="bi bi-robot"></i> AI Asistan</span>
+            <button class="chat-close" onclick="toggleChat()">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                Merhaba! HTML5 ve web programlama hakkında sorularınızı yanıtlamaya hazırım.
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Mesajınızı yazın...">
+            <button onclick="sendMessage()">
+                <i class="bi bi-send"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/chat.js"></script>
+</body>
+</html> 

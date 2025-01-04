@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Özet | HTML5 Dersleri</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/lesson.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="logo">
+            <i class="bi bi-code-slash"></i>
+            <span>HTML5 Dersleri</span>
+        </div>
+        <div class="breadcrumb">
+            <a href="../index.html">Ana Sayfa</a>
+            <i class="bi bi-chevron-right"></i>
+            <span>HTML5 Özet</span>
+        </div>
+        <div class="top-actions">
+            <button class="action-btn" title="Terminal'i Aç" onclick="window.location.href='../terminal.html'">
+                <i class="bi bi-terminal"></i>
+            </button>
+            <button class="top-btn" onclick="toggleChat()">
+                <i class="bi bi-chat-dots"></i>
+            </button>
+            <button id="themeToggle" class="top-btn">
+                <i class="bi bi-moon-fill"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="lesson-container">
+        <!-- Sidebar -->
+        <aside class="lesson-sidebar">
+            <div class="sidebar-header">
+                <div class="module-badge">03</div>
+                <h2>HTML5 Özet</h2>
+            </div>
+            <nav class="lesson-nav">
+                <a href="#temel-yapi" class="lesson-nav-item">
+                    <i class="bi bi-file-code"></i>
+                    <span>Temel Yapı</span>
+                </a>
+                <a href="#metin-elementleri" class="lesson-nav-item">
+                    <i class="bi bi-text-paragraph"></i>
+                    <span>Metin Elementleri</span>
+                </a>
+                <a href="#listeler" class="lesson-nav-item">
+                    <i class="bi bi-list-ul"></i>
+                    <span>Listeler</span>
+                </a>
+                <a href="#linkler" class="lesson-nav-item">
+                    <i class="bi bi-link-45deg"></i>
+                    <span>Linkler</span>
+                </a>
+                <a href="#resimler" class="lesson-nav-item">
+                    <i class="bi bi-image"></i>
+                    <span>Resimler</span>
+                </a>
+                <a href="#tablolar" class="lesson-nav-item">
+                    <i class="bi bi-table"></i>
+                    <span>Tablolar</span>
+                </a>
+                <a href="#formlar" class="lesson-nav-item">
+                    <i class="bi bi-input-cursor"></i>
+                    <span>Formlar</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="lesson-content">
+            <h1>HTML5 Kapsamlı Özet</h1>
+            <p class="lesson-intro">Bu sayfada HTML5'in temel yapı taşlarını ve sık kullanılan elementlerini bulabilirsiniz.</p>
+
+            <!-- Temel Yapı -->
+            <section id="temel-yapi">
+                <h2>1. HTML5 Temel Yapı</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>HTML</span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
+                    </div>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="tr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="Sayfa açıklaması"&gt;
+    &lt;title&gt;Sayfa Başlığı&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;
+            &lt;!-- Navigasyon içeriği --&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;section&gt;
+                &lt;!-- Bölüm içeriği --&gt;
+            &lt;/section&gt;
+        &lt;/article&gt;
+        
+        &lt;aside&gt;
+            &lt;!-- Yan içerik --&gt;
+        &lt;/aside&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;!-- Alt bilgi --&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+                <div class="info-box">
+                    <h3><i class="bi bi-info-circle"></i> Önemli Notlar</h3>
+                    <ul>
+                        <li>DOCTYPE tanımı HTML5 için zorunludur</li>
+                        <li>lang özelliği SEO için önemlidir</li>
+                        <li>meta viewport mobil uyumluluk için gereklidir</li>
+                        <li>Semantik elementler kullanılmalıdır</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Metin Elementleri -->
+            <section id="metin-elementleri">
+                <h2>2. Metin Elementleri</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>HTML</span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
+                    </div>
+                    <pre><code>&lt;!-- Başlıklar --&gt;
+&lt;h1&gt;Ana Başlık&lt;/h1&gt;
+&lt;h2&gt;Alt Başlık&lt;/h2&gt;
+&lt;h3&gt;Bölüm Başlığı&lt;/h3&gt;
+
+&lt;!-- Paragraflar --&gt;
+&lt;p&gt;Normal paragraf metni&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kalın metin&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;İtalik metin&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;mark&gt;Vurgulu metin&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Kod metni&lt;/code&gt;&lt;/p&gt;
+
+&lt;!-- Alıntılar --&gt;
+&lt;blockquote&gt;
+    Uzun alıntı metni buraya gelir.
+    &lt;cite&gt;- Yazar Adı&lt;/cite&gt;
+&lt;/blockquote&gt;
+
+&lt;!-- Kısa Alıntı --&gt;
+&lt;p&gt;&lt;q&gt;Kısa alıntı&lt;/q&gt;&lt;/p&gt;
+
+&lt;!-- Alt ve Üst Simge --&gt;
+&lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O ve x&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</code></pre>
+                </div>
+            </section>
+
+            <!-- Listeler -->
+            <section id="listeler">
+                <h2>3. Listeler</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>HTML</span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
+                    </div>
+                    <pre><code>&lt;!-- Sırasız Liste --&gt;
+&lt;ul&gt;
+    &lt;li&gt;Liste öğesi 1&lt;/li&gt;
+    &lt;li&gt;Liste öğesi 2&lt;/li&gt;
+    &lt;li&gt;Liste öğesi 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Sıralı Liste --&gt;
+&lt;ol&gt;
+    &lt;li&gt;Birinci öğe&lt;/li&gt;
+    &lt;li&gt;İkinci öğe&lt;/li&gt;
+    &lt;li&gt;Üçüncü öğe&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- Tanım Listesi --&gt;
+&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;Hyper Text Markup Language&lt;/dd&gt;
+    
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                </div>
+            </section>
+
+            <!-- Linkler -->
+            <section id="linkler">
+                <h2>4. Linkler ve URL Kullanımı</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>HTML</span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
+                    </div>
+                    <pre><code>&lt;!-- Temel Link --&gt;
+&lt;a href="sayfa.html"&gt;Sayfaya Git&lt;/a&gt;
+
+&lt;!-- Harici Link --&gt;
+&lt;a href="https://www.example.com" target="_blank"&gt;Yeni Sekmede Aç&lt;/a&gt;
+
+&lt;!-- E-posta Linki --&gt;
+&lt;a href="mailto:ornek@mail.com"&gt;E-posta Gönder&lt;/a&gt;
+
+&lt;!-- Telefon Linki --&gt;
+&lt;a href="tel:+901234567890"&gt;Ara&lt;/a&gt;
+
+&lt;!-- Dosya İndirme Linki --&gt;
+&lt;a href="dosya.pdf" download&gt;PDF İndir&lt;/a&gt;
+
+&lt;!-- Sayfa İçi Link --&gt;
+&lt;a href="#bolum1"&gt;Bölüme Git&lt;/a&gt;
+
+&lt;!-- Görsel Link --&gt;
+&lt;a href="sayfa.html"&gt;
+    &lt;img src="resim.jpg" alt="Tıklanabilir Resim"&gt;
+&lt;/a&gt;</code></pre>
+                </div>
+            </section>
+
+            <!-- Resimler -->
+            <section id="resimler">
+                <h2>5. Resimler ve Medya</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>HTML</span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
+                    </div>
+                    <pre><code>&lt;!-- Temel Resim --&gt;
+&lt;img src="resim.jpg" alt="Resim açıklaması"&gt;
+
+&lt;!-- Boyutlu Resim --&gt;
+&lt;img src="resim.jpg" alt="Resim" width="300" height="200"&gt;
+
+&lt;!-- Resim ve Açıklama --&gt;
+&lt;figure&gt;
+    &lt;img src="resim.jpg" alt="Resim"&gt;
+    &lt;figcaption&gt;Resim açıklaması&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;!-- Responsive Resim --&gt;
+&lt;picture&gt;
+    &lt;source media="(min-width: 800px)" srcset="buyuk.jpg"&gt;
+    &lt;source media="(min-width: 400px)" srcset="orta.jpg"&gt;
+    &lt;img src="kucuk.jpg" alt="Responsive resim"&gt;
+&lt;/picture&gt;
+
+&lt;!-- Video --&gt;
+&lt;video controls width="500"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Tarayıcınız video elementini desteklemiyor.
+&lt;/video&gt;
+
+&lt;!-- Ses --&gt;
+&lt;audio controls&gt;
+    &lt;source src="ses.mp3" type="audio/mpeg"&gt;
+    Tarayıcınız audio elementini desteklemiyor.
+&lt;/audio&gt;</code></pre>
+                </div>
+            </section>
+
+            <!-- Tablolar -->
+            <section id="tablolar">
+                <h2>6. Tablolar</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>HTML</span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
+                    </div>
+                    <pre><code>&lt;table&gt;
+    &lt;caption&gt;Tablo Başlığı&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Başlık 1&lt;/th&gt;
+            &lt;th&gt;Başlık 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Hücre 1&lt;/td&gt;
+            &lt;td&gt;Hücre 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="2"&gt;Toplam&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+                </div>
+            </section>
+
+            <!-- Formlar -->
+            <section id="formlar">
+                <h2>7. Formlar</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>HTML</span>
+                        <button class="copy-btn" onclick="copyCode(this)">
+                            <i class="bi bi-clipboard"></i>
+                        </button>
+                    </div>
+                    <pre><code>&lt;form action="/gonder" method="post"&gt;
+    &lt;!-- Metin Girişi --&gt;
+    &lt;label for="isim"&gt;İsim:&lt;/label&gt;
+    &lt;input type="text" id="isim" name="isim" required&gt;
+
+    &lt;!-- E-posta --&gt;
+    &lt;label for="email"&gt;E-posta:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+
+    &lt;!-- Şifre --&gt;
+    &lt;label for="sifre"&gt;Şifre:&lt;/label&gt;
+    &lt;input type="password" id="sifre" name="sifre"&gt;
+
+    &lt;!-- Sayı --&gt;
+    &lt;label for="yas"&gt;Yaş:&lt;/label&gt;
+    &lt;input type="number" id="yas" name="yas" min="0" max="120"&gt;
+
+    &lt;!-- Tarih --&gt;
+    &lt;label for="tarih"&gt;Tarih:&lt;/label&gt;
+    &lt;input type="date" id="tarih" name="tarih"&gt;
+
+    &lt;!-- Onay Kutusu --&gt;
+    &lt;label&gt;
+        &lt;input type="checkbox" name="onay"&gt;
+        Kullanım şartlarını kabul ediyorum
+    &lt;/label&gt;
+
+    &lt;!-- Radio Butonlar --&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Cinsiyet:&lt;/legend&gt;
+        &lt;label&gt;
+            &lt;input type="radio" name="cinsiyet" value="erkek"&gt;
+            Erkek
+        &lt;/label&gt;
+        &lt;label&gt;
+            &lt;input type="radio" name="cinsiyet" value="kadin"&gt;
+            Kadın
+        &lt;/label&gt;
+    &lt;/fieldset&gt;
+
+    &lt;!-- Açılır Liste --&gt;
+    &lt;label for="sehir"&gt;Şehir:&lt;/label&gt;
+    &lt;select id="sehir" name="sehir"&gt;
+        &lt;option value=""&gt;Seçiniz...&lt;/option&gt;
+        &lt;option value="istanbul"&gt;İstanbul&lt;/option&gt;
+        &lt;option value="ankara"&gt;Ankara&lt;/option&gt;
+        &lt;option value="izmir"&gt;İzmir&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;!-- Çoklu Seçim --&gt;
+    &lt;label for="hobiler"&gt;Hobiler:&lt;/label&gt;
+    &lt;select id="hobiler" name="hobiler[]" multiple&gt;
+        &lt;option value="spor"&gt;Spor&lt;/option&gt;
+        &lt;option value="muzik"&gt;Müzik&lt;/option&gt;
+        &lt;option value="kitap"&gt;Kitap&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;!-- Metin Alanı --&gt;
+    &lt;label for="mesaj"&gt;Mesaj:&lt;/label&gt;
+    &lt;textarea id="mesaj" name="mesaj" rows="4"&gt;&lt;/textarea&gt;
+
+    &lt;!-- Dosya Yükleme --&gt;
+    &lt;label for="dosya"&gt;Dosya:&lt;/label&gt;
+    &lt;input type="file" id="dosya" name="dosya"&gt;
+
+    &lt;!-- Gönder Butonu --&gt;
+    &lt;button type="submit"&gt;Gönder&lt;/button&gt;
+    
+    &lt;!-- Sıfırla Butonu --&gt;
+    &lt;button type="reset"&gt;Sıfırla&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+            </section>
+
+            <div class="practice-section">
+                <h2><i class="bi bi-lightning"></i> Pratik Yapın</h2>
+                <p>Bu örnekleri kendi projelerinizde deneyebilirsiniz:</p>
+                <div class="ide-section">
+                    <a href="../ide.html" class="ide-toggle">
+                        <i class="bi bi-code-square"></i>
+                        IDE'yi Aç
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/chat.js"></script>
+</body>
+</html> 

@@ -1,0 +1,36 @@
+html5-web-programming/
+├── 01-temel-html5/
+│   ├── index.html
+│   ├── meta-tags.html
+│   └── text-elements.html
+├── 02-sayfa-yapisi/
+│   ├── index.html
+│   ├── semantic-elements.html
+│   └── page-sections.html
+├── 03-form-elementleri/
+│   ├── index.html
+│   ├── input-types.html
+│   └── form-validation.html
+├── 04-medya-elementleri/
+│   ├── index.html
+│   ├── images.html
+│   └── media.html
+├── 05-liste-ve-tablolar/
+│   ├── index.html
+│   ├── lists.html
+│   └── tables.html
+├── 06-form-ozellikleri/
+│   ├── index.html
+│   ├── validation.html
+│   └── patterns.html
+├── 07-sayfa-yapilandirma/
+│   ├── index.html
+│   └── meta-seo.html
+├── 08-erisilebilirlik/
+│   ├── index.html
+│   └── aria.html
+├── assets/
+│   ├── images/
+│   ├── css/
+│   └── js/
+└── index.html 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temel HTML5 Konseptleri</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/lesson.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="logo">
+            <i class="bi bi-code-slash"></i>
+            <span>HTML5 Dersleri</span>
+        </div>
+        <div class="breadcrumb">
+            <a href="../index.html">Ana Sayfa</a>
+            <i class="bi bi-chevron-right"></i>
+            <span>Temel HTML5</span>
+        </div>
+        <div class="top-actions">
+            <button class="top-btn" onclick="toggleTerminal()">
+                <i class="bi bi-terminal"></i>
+            </button>
+            <button class="top-btn" onclick="toggleChat()">
+                <i class="bi bi-chat-dots"></i>
+            </button>
+            <button id="themeToggle" class="top-btn">
+                <i class="bi bi-moon-fill"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="lesson-container">
+        <!-- Sidebar -->
+        <aside class="lesson-sidebar">
+            <div class="sidebar-header">
+                <div class="module-badge">01</div>
+                <h2>Temel HTML5</h2>
+            </div>
+            <nav class="lesson-nav">
+                <a href="index.html" class="lesson-nav-item active">
+                    <i class="bi bi-file-code"></i>
+                    <span>HTML5 Döküman Yapısı</span>
+                </a>
+                <a href="meta-tags.html" class="lesson-nav-item">
+                    <i class="bi bi-tags"></i>
+                    <span>Meta Etiketleri</span>
+                </a>
+                <a href="text-elements.html" class="lesson-nav-item">
+                    <i class="bi bi-text-paragraph"></i>
+                    <span>Metin Elementleri</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="lesson-content">
+            <h1>HTML5 Döküman Yapısı</h1>
+            <p class="lesson-intro">Modern HTML5 döküman yapısı şu şekildedir:</p>
+
+            <div class="code-block">
+                <div class="code-header">
+                    <span>HTML</span>
+                    <button class="copy-btn" onclick="copyCode(this)">
+                        <i class="bi bi-clipboard"></i>
+                    </button>
+                </div>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="tr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Sayfa Başlığı&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    İçerik
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+
+            <div class="practice-section">
+                <h2><i class="bi bi-lightning"></i> Pratik Alıştırma</h2>
+                <p>Aşağıdaki yapıyı kendi HTML dosyanızda oluşturun:</p>
+                <div class="task-list">
+                    <div class="task-item">
+                        <input type="checkbox" id="task1">
+                        <label for="task1">Döküman tipini tanımlayın</label>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" id="task2">
+                        <label for="task2">Dil ayarını Türkçe yapın</label>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" id="task3">
+                        <label for="task3">UTF-8 karakter kodlamasını ekleyin</label>
+                    </div>
+                    <div class="task-item">
+                        <input type="checkbox" id="task4">
+                        <label for="task4">Viewport meta etiketini ekleyin</label>
+                    </div>
+                </div>
+
+                <div class="ide-section">
+                    <a href="../ide.html" class="ide-toggle">
+                        <i class="bi bi-code-square"></i>
+                        IDE'yi Aç
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Terminal -->
+    <div id="terminal" class="terminal">
+        <div class="terminal-header">
+            <span><i class="bi bi-terminal"></i> Terminal</span>
+            <button class="terminal-close" onclick="toggleTerminal()">×</button>
+        </div>
+        <div class="terminal-content">
+            <div class="terminal-line">
+                <span class="prompt">$</span>
+                <input type="text" class="terminal-input" placeholder="Komut girin...">
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Widget -->
+    <div id="chatWidget" class="chat-widget">
+        <div class="chat-header">
+            <span><i class="bi bi-robot"></i> AI Asistan</span>
+            <button class="chat-close" onclick="toggleChat()">×</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                Merhaba! HTML5 ve web programlama hakkında sorularınızı yanıtlamaya hazırım.
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Mesajınızı yazın...">
+            <button onclick="sendMessage()">
+                <i class="bi bi-send"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/chat.js"></script>
+</body>
+</html> 
